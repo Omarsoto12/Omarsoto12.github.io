@@ -1,0 +1,9 @@
+---
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discusión General
+    url: https://github.com/tu-usuario/mi-portafolio/discussions
+    about: Para preguntas generales, ideas y discusiones
+  - name: 📧 Email Directo
+    url: mailto:tu@email.com
+    about: Para asuntos privados o consultoría

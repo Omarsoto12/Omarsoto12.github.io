@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="ta da">
+  <title id="ta">Avatar de perfil</title>
+  <desc id="da">Ilustracion simple de usuario sobre fondo degradado.</desc>
+  <defs>
+    <linearGradient id="ava" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#ava)"/>
+  <circle cx="200" cy="150" r="74" fill="#ecfeff" opacity="0.9"/>
+  <path d="M90 340 C90 275, 145 230, 200 230 C255 230, 310 275, 310 340" fill="#ecfeff" opacity="0.9"/>
+</svg>

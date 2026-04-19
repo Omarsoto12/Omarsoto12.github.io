@@ -1,0 +1,36 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/pages/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@encabezado/*": [
+        "src/pages/encabezado/*"
+      ],
+      "@habilidades/*": [
+        "src/pages/habilidades/*"
+      ],
+      "@sobre_mi/*": [
+        "src/pages/sobre_mi/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}

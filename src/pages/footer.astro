@@ -1,0 +1,91 @@
+---
+import {
+	HiEnvelope,
+	HiGlobeAmericas,
+	HiMapPin,
+	HiPhone,
+} from "react-icons/hi2";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const contacto = {
+	nombre: "Omar Sotomayor De Avila",
+	rol: "Desarrollador de Software y QA Engineer",
+	ubicacion: "Colombia",
+	email: "omar.sotomayor@email.com",
+	telefono: "+57 301 508 6597",
+	github: "https://github.com/",
+	linkedin: "https://www.linkedin.com/in/",
+};
+---
+
+<footer class="mt-12 w-full border-y border-cyan-400/25 bg-slate-900/40">
+	<div class="mx-auto w-full max-w-[90rem] px-6 py-10 sm:px-8">
+		<div class="grid gap-8 lg:grid-cols-[1.2fr_1fr_1fr]">
+			<section>
+				<p class="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">Contacto</p>
+				<h2 class="mt-2 text-2xl font-bold sm:text-3xl">{contacto.nombre}</h2>
+				<p class="mt-2 text-sm text-slate-300 sm:text-base">{contacto.rol}</p>
+
+				<div class="mt-5 flex flex-wrap gap-3">
+					<a
+						href={contacto.github}
+						target="_blank"
+						rel="noreferrer"
+						class="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-slate-950/70 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-300/40 hover:text-white"
+					>
+						<FaGithub className="h-4 w-4" aria-label="GitHub" />
+						<span>GitHub</span>
+					</a>
+
+					<a
+						href={contacto.linkedin}
+						target="_blank"
+						rel="noreferrer"
+						class="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-slate-950/70 px-3 py-2 text-sm text-slate-200 transition hover:border-cyan-300/40 hover:text-white"
+					>
+						<FaLinkedin className="h-4 w-4" aria-label="LinkedIn" />
+						<span>LinkedIn</span>
+					</a>
+				</div>
+			</section>
+
+			<section>
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-cyan-300">Informacion de Contacto</h3>
+				<ul class="mt-4 space-y-3 text-sm text-slate-300">
+					<li class="flex items-center gap-2">
+						<HiEnvelope className="h-4 w-4 text-cyan-300" aria-label="Correo" />
+						<a href={`mailto:${contacto.email}`} class="hover:text-white">{contacto.email}</a>
+					</li>
+					<li class="flex items-center gap-2">
+						<HiPhone className="h-4 w-4 text-cyan-300" aria-label="Telefono" />
+						<a href={`tel:${contacto.telefono.replace(/\s+/g, "")}`} class="hover:text-white">{contacto.telefono}</a>
+					</li>
+					<li class="flex items-center gap-2">
+						<HiMapPin className="h-4 w-4 text-cyan-300" aria-label="Ubicacion" />
+						<span>{contacto.ubicacion}</span>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-cyan-300">Mas</h3>
+				<p class="mt-4 text-sm leading-relaxed text-slate-300">
+					Disponible para roles de QA Engineer, Automatizacion de Pruebas y desarrollo Fullstack orientado a calidad.
+				</p>
+				<a
+					href={contacto.linkedin}
+					target="_blank"
+					rel="noreferrer"
+					class="mt-4 inline-flex items-center gap-2 rounded-lg border border-cyan-300/30 bg-cyan-400/10 px-3 py-2 text-sm text-cyan-200 transition hover:bg-cyan-400/20"
+				>
+					<HiGlobeAmericas className="h-4 w-4" aria-label="Perfil profesional" />
+					<span>Ver perfil profesional</span>
+				</a>
+			</section>
+		</div>
+
+		<div class="mt-8 border-t border-white/10 pt-4 text-xs text-slate-400">
+			© {new Date().getFullYear()} {contacto.nombre}. Portafolio profesional.
+		</div>
+	</div>
+</footer>

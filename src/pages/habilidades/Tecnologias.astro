@@ -1,0 +1,35 @@
+---
+const tecnologias = [
+  { nombre: "Python", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { nombre: "FastAPI", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+  { nombre: "Django", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+  { nombre: "React", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { nombre: "Astro", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" },
+  { nombre: "Flutter", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { nombre: "Java", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { nombre: "JavaScript", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { nombre: "PostgreSQL", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { nombre: "MongoDB", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { nombre: "Docker", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { nombre: "Postman", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+  { nombre: "Jira", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+  { nombre: "TensorFlow", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+  { nombre: "Keras", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
+  { nombre: "TailwindCSS", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  { nombre: "Git", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+];
+
+---
+<div class="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-3">
+  {tecnologias.map((tech) => (
+    <div class="group flex items-center gap-3 rounded-xl border border-white/10 bg-slate-950/60 px-3 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-slate-900 hover:shadow-[0_0_18px_rgba(56,189,248,0.25)]">
+      <img
+        src={tech.icono}
+        alt={tech.nombre}
+        class="h-8 w-8 shrink-0 object-contain transition-transform duration-300 group-hover:scale-110"
+        loading="lazy"
+      />
+      <span class="text-xs font-medium text-slate-200 sm:text-sm">{tech.nombre}</span>
+    </div>
+  ))}
+</div>

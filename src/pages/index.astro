@@ -1,0 +1,60 @@
+---
+import "@styles/global.css";
+import { HiHomeModern } from "react-icons/hi2";
+import { AvatarPerfil } from "@encabezado/Avatar_perfil";
+import { ImageCarousel } from "@encabezado/Carrucel_portada";
+import SobreMi from "@/sobre_mi/sobre_mi.astro";
+import ExperienciaLaboral from "@/experiencia/experiencia.astro";
+import MisLogros from "@/mis_logros/mis_logros.astro";
+import MisProyectos from "@/mis_proyectos/mis_proyectos.astro";
+import StackTecnologico from "@habilidades/Stack_tecnologico.astro";
+import Footer from "@/footer.astro";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Mi Portafolio</title>
+	</head>
+	<body class="min-h-screen bg-slate-950 text-white antialiased">
+		<main>
+			<div class="relative">
+				<ImageCarousel client:load />
+				<AvatarPerfil src="/avatar-circle.svg" alt="Avatar de usuario" />
+			</div>
+
+			<section class="mx-auto max-w-7xl px-6 pt-10">
+				<h1 class="flex items-center gap-3 text-2xl font-bold sm:text-3xl">
+					<HiHomeModern className="h-6 w-6 text-cyan-300" aria-label="Inicio" />
+					<span>Bienvenido a mi Portafolio</span>
+				</h1>
+				<p class="mt-3 text-lg font-semibold text-cyan-300 sm:text-xl">
+					Omar Sotomayor De Avila
+				</p>
+				<p class="mt-1 text-sm text-slate-300 sm:text-base">
+					Desarrollador de Software y QA Engineer
+				</p>
+			</section>
+
+			<section class="mx-auto max-w-7xl px-6 pt-10">
+				<SobreMi />
+			</section>
+
+			<section class="mx-auto max-w-7xl px-6 pt-8">
+				<MisLogros />
+			</section>
+
+			<StackTecnologico />
+
+			<MisProyectos />
+
+			<ExperienciaLaboral />
+
+			<Footer />
+		</main>
+	</body>
+</html>

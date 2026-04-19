@@ -1,0 +1,81 @@
+---
+import { HiBriefcase } from "react-icons/hi2";
+
+const experiencias = [
+  {
+    rol: "Supervisor de Produccion",
+    organizacion: "Tecnoglass",
+    periodo: "Etapa previa al desarrollo de software",
+    tipo: "Experiencia laboral",
+    resumen:
+      "Liderazgo operativo con enfoque en calidad, mejora continua y optimizacion de procesos.",
+    logros: [
+      "Mejora del 21% en calidad de acabados.",
+      "Reduccion de tiempos de entrega mediante estandarizacion de procesos.",
+      "Coordinacion de equipos bajo indicadores de desempeno y control de calidad.",
+    ],
+    stack: ["Calidad", "Mejora continua", "Liderazgo", "Gestion de procesos"],
+  },
+  {
+    rol: "Desarrollador frontend",
+    organizacion: "Fundacion Universitaria Comfenalco",
+    periodo: "02-2025 - 12-2025",
+    tipo: "Experiencia tecnica aplicada",
+    resumen:
+      "Convertí diseños UI/UX en código funcional, entregando componentes responsivos que cumplieron 100% con los mockups mediante TailwindCSS y JavaScript",
+    logros: [
+      "Desarrollo de interfaces responsivas y accesibles con HTML, CSS y JavaScript.",
+      "Colaboracion con diseñadores para implementar diseños UI/UX de alta fidelidad.",
+      "Optimización del rendimiento frontend para mejorar la experiencia del usuario.",     
+    ],
+    stack: ["QA", "Scrum", "Laravel","PostgreSQL", "TailwindCSS"],
+  },
+];
+---
+<section class="mx-auto max-w-[90rem] px-6 pt-8">
+  <div class="rounded-2xl border border-cyan-400/25 bg-slate-900/40 p-6 shadow-[0_0_60px_rgba(56,189,248,0.12)] sm:p-8">
+    <h2 class="flex items-center gap-3 text-2xl font-bold sm:text-3xl">
+      <HiBriefcase className="h-6 w-6 text-cyan-300" aria-label="Experiencia laboral" />
+      <span>Experiencia Laboral</span>
+    </h2>
+
+    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+      Trayectoria combinada en operacion, calidad, pruebas y desarrollo de software, con foco en resultados medibles.
+    </p>
+
+    <div class="mt-7 grid grid-cols-1 gap-6 xl:grid-cols-2">
+      {experiencias.map((item) => (
+        <article class="rounded-2xl border border-white/10 bg-slate-950/60 p-5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <p class="text-xs font-semibold uppercase tracking-wider text-cyan-300">{item.tipo}</p>
+            <p class="text-xs text-slate-400">{item.periodo}</p>
+          </div>
+
+          <h3 class="mt-2 text-xl font-semibold text-white">{item.rol}</h3>
+          <p class="mt-1 text-sm text-slate-300">{item.organizacion}</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">{item.resumen}</p>
+
+          <div class="mt-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-cyan-300">Logros clave</p>
+            <ul class="mt-2 space-y-2 text-sm text-slate-300">
+              {item.logros.map((logro) => (
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300"></span>
+                  <span>{logro}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            {item.stack.map((tech) => (
+              <span class="rounded-full border border-cyan-400/20 bg-slate-800/70 px-2.5 py-1 text-xs font-medium text-slate-200">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
