@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Mi Portafolio
 
 Portafolio profesional moderno desarrollado con **Astro**, **React** y **Tailwind CSS**. Showcasing tus proyectos, experiencia y habilidades en desarrollo de software.
@@ -137,131 +138,80 @@ Proyectos incluidos:
 Tarjetas estratégicas con roles, técnicas y responsabilidades clave.
 
 ### 6. **Footer**
-Contacto directo con links a GitHub, LinkedIn, email, teléfono y ubicación.
+# 🚀 Mi Portafolio
+
+Portafolio profesional moderno desarrollado con Astro, React y Tailwind CSS.
+
+## ✨ Características
+
+- Diseño responsivo y moderno
+- Secciones interactivas
+- Modal reutilizable para proyectos
+- Carrusel de portada
+- Footer de contacto
+
+## 🛠️ Tecnologías
+
+- Astro
+- React
+- Tailwind CSS
+- TypeScript
+- React Icons
+
+## 📁 Estructura del Proyecto
+
+```text
+src/
+├── pages/
+│   ├── index.astro
+│   ├── encabezado/
+│   ├── sobre_mi/
+│   ├── mis_logros/
+│   ├── habilidades/
+│   ├── mis_proyectos/
+│   ├── experiencia/
+│   └── footer.astro
+├── styles/
+└── public/
+```
+
+## 🚀 Instalación
+
+```bash
+npm install
+npm run dev
+```
+
+## 📦 Scripts
+
+- `npm run dev` - iniciar desarrollo
+- `npm run build` - generar build
+- `npm run preview` - previsualizar build
+- `npm run astro` - comandos de Astro
+
+## 📋 Configuración de Alias
+
+- `@` -> `/src/pages`
+- `@pages` -> `/src/pages`
+- `@styles` -> `/src/styles`
+- `@encabezado` -> `/src/pages/encabezado`
+- `@habilidades` -> `/src/pages/habilidades`
+- `@sobre_mi` -> `/src/pages/sobre_mi`
+
+## 📊 Secciones Principales
+
+- Sobre Mí
+- Mis Logros
+- Stack Tecnológico
+- Mis Proyectos
+- Experiencia Laboral
+- Footer
 
 ## 🎨 Personalización
 
-### Actualizar datos de contacto
-Edita `src/pages/footer.astro`:
-
-```astro
-const contacto = {
-  nombre: "Tu Nombre",
-  rol: "Tu Rol",
-  email: "tu@email.com",
-  telefono: "+57 XXX XXX XXXX",
-  github: "https://github.com/tu-usuario",
-  linkedin: "https://linkedin.com/in/tu-perfil",
-  ubicacion: "Tu Ciudad, País"
-};
-```
-
-### Agregar proyectos
-Edita `src/pages/mis_proyectos/projects.data.ts`:
-
-```typescript
-{
-  id: "nuevo-proyecto",
-  name: "Nombre del Proyecto",
-  logo: "/ruta-imagen.jpg",
-  featured: true,
-  imageFit: "cover" | "contain",
-  imagePosition: "center" | "top" | "bottom",
-  technologies: ["Tech1", "Tech2"],
-  summary: "Resumen corto",
-  problem: "Problema abordado",
-  solution: "Solución implementada",
-  impact: "Resultado de impacto",
-  role: "Tu rol",
-  status: "Finalizado" | "En progreso",
-  year: "2026"
-}
-```
-
-## 📱 Responsive Design
-
-Breakpoints optimizados:
-- **Mobile**: < 640px (sm)
-- **Tablet**: 640px - 1024px (lg)
-- **Desktop**: > 1024px
-
-Todos los componentes son completamente responsivos.
-
-## 🔗 Rutas y Navegación
-
-| Sección | Ubicación |
-|---------|-----------|
-| Home | `/` |
-| Sobre Mí | En home |
-| Proyectos | En home + modal |
-| Experiencia | En home |
-| Contacto | Footer |
-
-## 📦 Dependencias Clave
-
-```json
-{
-  "astro": "^6.1.8",
-  "react": "^19.2.5",
-  "tailwindcss": "^4.2.2",
-  "react-icons": "^5.6.0"
-}
-```
-
-## 🚢 Despliegue
-
-### Vercel (recomendado)
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm run build
-# Sube la carpeta 'dist' a Netlify
-```
-
-### GitHub Pages
-```bash
-npm run build
-git add dist/
-git commit -m "Deploy"
-git push
-```
-
-## 💡 Mejoras Futuras
-
-- [ ] Blog integrado
-- [ ] Sistema de comentarios
-- [ ] Formulario de contacto con backend
-- [ ] Dark/Light mode switcher
-- [ ] Animaciones adicionales con Framer Motion
-- [ ] Integración con CMS
+Edita los archivos dentro de `src/pages/` para ajustar contenido, contacto, proyectos y estilos.
 
 ## 📄 Licencia
 
-Este proyecto está bajo licencia MIT. Ver archivo `LICENSE` para más detalles.
-
-## 👤 Autor
-
-**Tu Nombre**
-- 🌐 GitHub: [tu-usuario](https://github.com/tu-usuario)
-- 💼 LinkedIn: [tu-perfil](https://linkedin.com/in/tu-perfil)
-- 📧 Email: tu@email.com
-- 📍 Tu Ubicación
-
-## 🤝 Contribuciones
-
-Las sugerencias y reportes de bugs son bienvenidos. No dudes en abrir un issue o pull request.
-
-## 📞 Contacto
-
-¿Interesado en colaborar? Contactame a través de:
-- GitHub Issues
-- LinkedIn
-- Email directo
-
----
-
-**Hecho con ❤️ usando Astro, React y Tailwind CSS**
+MIT
+vercel
