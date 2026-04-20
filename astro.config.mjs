@@ -5,10 +5,13 @@ import react from '@astrojs/react';
 
 import tailwindcss from '@tailwindcss/vite';
 
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
+const isUserPageRepo = repoName.toLowerCase() === 'omarsoto12.github.io';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://omarsoto12.github.io',
-  base: '/mi.portafolio.github.io',
+  base: isUserPageRepo ? '/' : repoName ? `/${repoName}` : '/',
 
   integrations: [react()],
 
