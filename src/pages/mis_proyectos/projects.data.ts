@@ -109,4 +109,28 @@ export const PROJECTS: PortfolioProject[] = [
       "HTTP",
     ],
   },
+  {
+    id: "urban-grocers-api-testing",
+    name: "Pruebas de API para la aplicación Urban Grocers",
+    logo: "imagen_tripleten.jpg",
+    featured: false,
+    summary:
+      "Como QA Engineer, diseñé y ejecuté pruebas de API basadas en requisitos funcionales para validar solicitudes HTTP y respuestas del sistema.",
+    problem:
+      "Riesgo de inconsistencias en datos y manejo incorrecto de errores en endpoints críticos.",
+    solution:
+      "Batería de pruebas en Postman con validación de payloads POST/PUT, códigos HTTP y estructura JSON en endpoints principales.",
+    impact:
+      "Validación de integridad de datos, verificación de respuestas y confirmación del manejo correcto de casos límite y datos inválidos.",
+    role: "QA Engineer",
+    status: "Finalizado",
+    year: "2026",
+    technologies: [
+      "API Testing",
+      "Postman",
+      "Apidoc",
+      "Validación JSON/XML",
+      "HTTP",
+    ],
+  },
 ];
