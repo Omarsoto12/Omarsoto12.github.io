@@ -34,7 +34,16 @@ function ProjectCard({
       </div>
 
       <div className="p-4">
-        <h3 className={`${large ? "text-xl" : "text-lg"} font-semibold text-white`}>{project.name}</h3>
+        <span
+          className={`inline-flex items-center gap-1 rounded-full px-3 py-0.5 text-xs font-semibold border ${
+            project.role.toLowerCase().includes("qa")
+              ? "bg-purple-900/60 text-purple-200 border-purple-400/30"
+              : "bg-emerald-900/60 text-emerald-200 border-emerald-400/30"
+          }`}
+        >
+          {project.role.toLowerCase().includes("qa") ? "🔍 QA" : "💻 Desarrollo"}
+        </span>
+        <h3 className={`${large ? "text-xl" : "text-lg"} mt-2 font-semibold text-white`}>{project.name}</h3>
         <p className="mt-2 text-sm text-slate-300">{project.summary}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -72,7 +81,7 @@ export function ProyectosGrid() {
 
       {regularProjects.length > 0 && (
         <section className="mt-8">
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-cyan-300">Mas Proyectos</h3>
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-cyan-300">Más Proyectos</h3>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             {regularProjects.map((project) => (
               <ProjectCard key={project.id} project={project} onSelect={setSelectedProject} />

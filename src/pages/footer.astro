@@ -11,10 +11,10 @@ const contacto = {
 	nombre: "Omar Sotomayor De Avila",
 	rol: "Desarrollador de Software y QA Engineer",
 	ubicacion: "Colombia",
-	email: "omar.sotomayor@email.com",
+	email: "omarsotomayordeavila@gmail.com",
 	telefono: "+57 301 508 6597",
-	github: "https://github.com/",
-	linkedin: "https://www.linkedin.com/in/",
+	github: "https://github.com/Omarsoto12",
+	linkedin: "https://www.linkedin.com/in/omar-sotomayor-de-avila-qa-desarrollador/",
 };
 ---
 
@@ -50,18 +50,18 @@ const contacto = {
 			</section>
 
 			<section>
-				<h3 class="text-sm font-semibold uppercase tracking-wider text-cyan-300">Informacion de Contacto</h3>
+				<h3 class="text-sm font-semibold uppercase tracking-wider text-cyan-300">Información de Contacto</h3>
 				<ul class="mt-4 space-y-3 text-sm text-slate-300">
 					<li class="flex items-center gap-2">
 						<HiEnvelope className="h-4 w-4 text-cyan-300" aria-label="Correo" />
 						<a href={`mailto:${contacto.email}`} class="hover:text-white">{contacto.email}</a>
 					</li>
 					<li class="flex items-center gap-2">
-						<HiPhone className="h-4 w-4 text-cyan-300" aria-label="Telefono" />
+						<HiPhone className="h-4 w-4 text-cyan-300" aria-label="Teléfono" />
 						<a href={`tel:${contacto.telefono.replace(/\s+/g, "")}`} class="hover:text-white">{contacto.telefono}</a>
 					</li>
 					<li class="flex items-center gap-2">
-						<HiMapPin className="h-4 w-4 text-cyan-300" aria-label="Ubicacion" />
+						<HiMapPin className="h-4 w-4 text-cyan-300" aria-label="Ubicación" />
 						<span>{contacto.ubicacion}</span>
 					</li>
 				</ul>
@@ -70,7 +70,7 @@ const contacto = {
 			<section>
 				<h3 class="text-sm font-semibold uppercase tracking-wider text-cyan-300">Mas</h3>
 				<p class="mt-4 text-sm leading-relaxed text-slate-300">
-					Disponible para roles de QA Engineer, Automatizacion de Pruebas y desarrollo Fullstack orientado a calidad.
+					Disponible para roles de Desarrollador Fullstack y QA Engineer, con enfoque en calidad y soluciones robustas.
 				</p>
 				<a
 					href={contacto.linkedin}

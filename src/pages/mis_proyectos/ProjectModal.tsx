@@ -48,9 +48,20 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="flex items-start justify-between gap-4">
           <div>
             <h3 className="text-2xl font-bold text-white">{project.name}</h3>
-            <p className="mt-1 text-sm text-slate-400">
-              {project.role} · {project.status} · {project.year}
-            </p>
+            <div className="mt-1 flex flex-wrap items-center gap-2">
+              <span
+                className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold border ${
+                  project.role.toLowerCase().includes("qa")
+                    ? "bg-purple-900/60 text-purple-200 border-purple-400/30"
+                    : "bg-emerald-900/60 text-emerald-200 border-emerald-400/30"
+                }`}
+              >
+                {project.role.toLowerCase().includes("qa") ? "🔍 QA" : "💻 Desarrollo"}
+              </span>
+              <span className="text-sm text-slate-400">
+                {project.role} · {project.status} · {project.year}
+              </span>
+            </div>
           </div>
           <button
             onClick={onClose}
